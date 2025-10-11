@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -12,18 +13,19 @@ export default function Home() {
         <img src="logo.png" className="opacity-50 "></img>
       </div>
       <div className="grid justify-center ">
-        <button
-          type="button"
+        <Link
+          href={"/admin"}
           className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-light rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-stone-900 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font font-serif"
         >
           Masuk Sebagai Guru
-        </button>
-        <button
+        </Link>
+        <Link
+          href="/user/loginUser/"
           type="button"
           className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-light rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-stone-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700 font-serif"
         >
           Masuk Sebagai Siswa
-        </button>
+        </Link>
       </div>
     </div>
   );
